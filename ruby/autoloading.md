@@ -1,5 +1,7 @@
 # A good autoloading example
 
+From [here](https://twitter.com/jankomarohnic/status/1589018408116428800).
+
 ```ruby
 require "zeitwerk"
 require "listen"
