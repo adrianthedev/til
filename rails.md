@@ -13,3 +13,13 @@ Rails.application.routes.draw do
   # other routes below
 end
 ```
+
+## Append inline module to controller
+
+```ruby
+Rails.configuration.to_prepare do
+  Avo::ApplicationController.include(Module.new {
+    def yes = :no
+  })
+end
+```
