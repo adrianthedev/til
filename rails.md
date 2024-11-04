@@ -23,3 +23,24 @@ Rails.configuration.to_prepare do
   })
 end
 ```
+
+## Route based authentication
+
+```ruby
+class AuthConstraint
+  def self.admin? (request)
+    cookies = ActionDispatch::Cookies::CookieJar.build(request, request.cookies)
+
+    User.joins(:sessions).where(
+      "sessions.id": cookies.signed[:session_id],
+      email_address: "youradmin@domain.com"
+    ).exists?
+  end
+end
+
+Rails.application.routes.draw do
+  constraints -> (request) { AuthConstraint.admin?(request) } do
+    # Any routes you want to protect
+  end
+end
+```
