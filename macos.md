@@ -13,3 +13,11 @@ ps -A | grep Core | awk '{ print $1 }' | xargs kill -9
 ```bash
 sudo lsof -iTCP -sTCP:LISTEN -n -P | awk 'NR>1 {print $9, $1, $2}' | sed 's/.*://' | while read port process pid; do echo "Port $port: $(ps -p $pid -o command= | sed 's/^-//') (PID: $pid)"; done | sort -n
 ```
+
+# SVG to PNG
+
+From: https://discussions.apple.com/thread/255717253?sortBy=rank
+
+```bash
+sips -s format png -o logo_maybe.png -z 327 2000 logo_maybe.svg
+```
