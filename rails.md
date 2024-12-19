@@ -44,3 +44,14 @@ Rails.application.routes.draw do
   end
 end
 ```
+
+## Render View Component in the controller
+
+From [corsego](https://blog.corsego.com/turbo-stream-view-components)
+
+```ruby
+render_to_string(PaginationComponent.new(results: @results))
+view_context.render(PaginationComponent.new(results: @results))
+PaginationComponent.new(results: @results).render_in(view_context)
+# most universal:
+ApplicationController.render(PaginationComponent.new(results: @results), layout: false)
