@@ -21,3 +21,9 @@ From: https://discussions.apple.com/thread/255717253?sortBy=rank
 ```bash
 sips -s format png -o logo_maybe.png -z 327 2000 logo_maybe.svg
 ```
+
+# Use ffmpeg to convert files to webm
+
+```bash
+ffmpeg -i input-file.mp4 -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis output-file.webm
+```
