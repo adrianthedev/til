@@ -4,6 +4,14 @@
 
 ```js
 #trixInitialize(event) {
+  const buttonHTML = `<button type="button" data-trix-action="gallery" class="trix-button trix-button--icon">${galleryButtonSVG}</button>`
+  // const buttonHTML = `<a href="${mediaLibraryPath}" data-turbo-frame="${window.Avo.configuration.modal_frame_id}" class="trix-button trix-button--icon">${galleryButtonSVG}</a>`
+  if (event.target.toolbarElement && event.target.toolbarElement.querySelector('.trix-button-group--file-tools')) {
+    event.target.toolbarElement
+      .querySelector('.trix-button-group--file-tools')
+      .insertAdjacentHTML('beforeend', buttonHTML)
+  }
+
   // vm is the controller instance
   const vm = this
   const gallery = {
