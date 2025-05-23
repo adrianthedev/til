@@ -59,3 +59,17 @@ Generate [ Your Concept ] icon with this JSON style:
   }
 }
 ```
+
+or
+
+```
+Generate a high-resolution isometric icon based on this logo. The icon should follow these stylistic and compositional guidelines:
+	•	Canvas and Geometry: Use a 1:1 aspect ratio. Fit objects comfortably within the frame. Center a dominant object, and place 1–3 supporting elements either symmetrically or diagonally around it.
+	•	Composition: Include 2–4 main objects. Create layered depth to imply slight elevation. Maintain consistent scale across all elements. Keep the scene minimal to moderate in visual density.
+	•	Lighting: Use soft ambient lighting with a subtle top-right or front-top light source. Apply gentle drop shadows behind and below elements, and add mild edge illumination to define forms.
+	•	Textures: Surfaces should appear semi-matte to satin, with subtle tactile detail like wood grain or soft fabric textures. Avoid hyper-realism; aim for stylized naturalism.
+	•	Render Quality: Render in high resolution using Octane or similar engine. Ensure crisp edges without outlines—use light and depth for separation. Shapes should be clean and readable, with minimal clutter.
+	•	Color Palette: Use naturalistic tones with a slight saturation boost. Choose harmonious muted colors with gentle contrast. Assign distinct colors to each object to improve identification and clarity.
+	•	Background: Flat pure white background (#FFFFFF), with no texture.
+	•	Tone and Usage: The icon should feel premium, friendly, and clean, with a lifestyle or service-oriented aesthetic. It must be brand-neutral, scalable for small to medium sizes, and able to match a cohesive icon system with interchangeable topics.
+```
